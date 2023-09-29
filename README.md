@@ -15,5 +15,5 @@ RA: 822163884
 Pablo de jesus Antonio                      
 RA: 822149587
 
-Pedro Henrique Morais Pereira 
+Pedro Henrique Morais Pereira
 RA: 822145369
