@@ -1,7 +1,7 @@
 # Nomes dos Integrantes do Grupo
 
-Caio Ryan Prado Sobral                   
-RA: 822152672
+Ingrid Ribeiro Pereira    
+RA: 822145390
 
 João Paulo Fernandes de Freitas    
 RA:821231962
@@ -14,3 +14,6 @@ RA: 822163884
 
 Pablo de jesus Antonio                      
 RA: 822149587
+
+Pedro Henrique Morais Pereira    
+RA: 822145369
