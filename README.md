@@ -1,19 +1,8 @@
-# Nomes dos Integrantes do Grupo
+# React + Vite
 
-Ingrid Ribeiro Pereira    
-RA: 822145390
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-João Paulo Fernandes de Freitas    
-RA:821231962
+Currently, two official plugins are available:
 
-João Pedro da Maia Moura              
-RA: 821224453
-
-Nicolas Wender Fontes Queiroz       
-RA: 822163884
-
-Pablo de jesus Antonio                      
-RA: 822149587
-
-Pedro Henrique Morais Pereira    
-RA: 822145369
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

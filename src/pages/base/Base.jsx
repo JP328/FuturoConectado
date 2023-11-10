@@ -5,11 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Base() {
   return (
-    <>
+    <div className='min-h-screen w-full'>
       <ToastContainer/>
       <Outlet/>
       <Footer />
-    </>
+    </div>
   )
 }
 

@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full h-full flex flex-col justify-center items-center bg-slate-200 overflow-hidden select-none"> 
+      <div className="w-full h-full flex flex-col justify-center items-center bg-slate-200 select-none"> 
         
         <div ref={recentUploads} className="w-full h-full bg-originBlue py-14 flex items-center flex-col">
           <VideoSection/>

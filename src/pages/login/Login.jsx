@@ -1,25 +1,30 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from "react-router-dom";
 // import { toast } from "react-toastify";
+
 import Header from "../../components/header/Header";
+import { addUser } from "../../store";
 
 export default function LoginPage() {
+
+  const dispatch = useDispatch();
+  const usuarioFake = {
+    id: '1',
+    name: 'João',
+    gender: 'Masculino',
+    birthdate: '10-10-2000',
+    email : 'joao@gmail.com',
+    cep : '00000-000',
+    password: 'joao123'
+  }
+  
   const navigate = useNavigate()
-  // const [ validationByPassword ] = useValidationByPasswordMutation()
 
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
-    standardUser: true
   })
-
-  useEffect(() => {
-    if (localStorage.getItem("admId")){
-      navigate("/admin-home")
-    } else if (localStorage.getItem("userId")) {
-      navigate("/usuario")
-    }
-  },[navigate]);
   
 
   const handleForm = (event, name) => {
@@ -30,7 +35,8 @@ export default function LoginPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    alert("Em manutenção, volte mais tarde...")
+    dispatch(addUser({...usuarioFake}));
+    navigate('/usuario');
     // await validationByPassword(loginData).then(res => {
 
     //   if (res.data.length !== 0) {

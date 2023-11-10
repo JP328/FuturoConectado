@@ -13,8 +13,9 @@ export default function Header(props) {
     ref.current?.scrollIntoView({behavior: "smooth"});
   }
 
+
   const handleColorBar = () => {
-    if (props.recentUploads) {
+    if (props.recentUploads && props.recentUploads.current !== null) {
       props.recentUploads.current.offsetTop - 200  <= window.scrollY ?
         setColorBarDefault("bg-originRed")
       : setColorBarDefault("bg-originLight/20")
