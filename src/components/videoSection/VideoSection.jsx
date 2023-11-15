@@ -62,15 +62,15 @@ export default function VideoSection() {
         ref={carousel} 
         className="overflow-hidden w-11/12 focus:outline-none appearance-none relative"
       >
+        <BsArrowRightCircleFill 
+          size='3rem'
+          onClick={() => handleCarouselArrows(1)} 
+          className="text-originLight cursor-pointer absolute top-1/2 right-0 z-10"/>
 
-          <BsArrowRightCircleFill 
-            size='3rem'
-            onClick={() => handleCarouselArrows(1)} 
-            className="text-originLight cursor-pointer absolute top-1/2 right-0 z-10"/>
-          <BsArrowLeftCircleFill 
-            size='3rem' 
-            onClick={() => handleCarouselArrows(0)} 
-            className="text-originLight cursor-pointer absolute top-1/2 z-10"/>
+        <BsArrowLeftCircleFill 
+          size='3rem' 
+          onClick={() => handleCarouselArrows(0)} 
+          className="text-originLight cursor-pointer absolute top-1/2 z-10"/>
         
         <motion.div 
           className="flex mt-8"

@@ -5,8 +5,8 @@ const userDataSlice = createSlice({
   initialState: {
     data : {
       id: '',
-      name: '',
-      gender: '',
+      fullName: '',
+      gender: 'Masculino',
       birthdate: '',
       email : '',
       cep : '',

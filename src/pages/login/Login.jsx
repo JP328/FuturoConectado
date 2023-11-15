@@ -11,12 +11,13 @@ export default function LoginPage() {
   const dispatch = useDispatch();
   const usuarioFake = {
     id: '1',
-    name: 'João',
+    fullName: 'João',
     gender: 'Masculino',
-    birthdate: '10-10-2000',
+    birthdate: '2000-10-10',
     email : 'joao@gmail.com',
     cep : '00000-000',
-    password: 'joao123'
+    password: 'joao123',
+    isAdmin: true
   }
   
   const navigate = useNavigate()
@@ -26,7 +27,6 @@ export default function LoginPage() {
     password: "",
   })
   
-
   const handleForm = (event, name) => {
     setLoginData((prevState) => {
       return { ...prevState, [name] : event}
@@ -36,41 +36,8 @@ export default function LoginPage() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     dispatch(addUser({...usuarioFake}));
-    navigate('/usuario');
-    // await validationByPassword(loginData).then(res => {
-
-    //   if (res.data.length !== 0) {
-    //     const id = res.data[0].idUsuario
-        
-    //     if(res.data.length !== 0) {
-    //       if(loginData.standardUser === true) {
-    //         localStorage.setItem("userId", id)
-    //         return navigate("/usuario")
-    //       }
     
-    //       localStorage.setItem("admId", id)
-    //       return navigate("/admin-home")
-    //     }      
-    //   } else {
-    //     toast.error("Email ou Senha incorretos!", {
-    //       position: "top-right",
-    //       autoClose: 5000,
-    //       closeOnClick: true,
-    //       pauseOnHover: true,
-    //       draggable: true,
-    //       progress: undefined,
-    //       }); 
-    //   }
-    // }).catch(() => {
-    //   toast.error("Serviço indisponível no momento! Tente mais tarde.", {
-    //     position: "top-right",
-    //     autoClose: 5000,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     });
-    // })
+    usuarioFake.isAdmin ? navigate('/administrador') : navigate('/usuario')
   }
 
   return(
@@ -121,7 +88,6 @@ export default function LoginPage() {
                     required
                     placeholder="********"
                   />
-                  {/* <p className="text-xs italic text-red-500">Senha ou email invalido</p> */}
                 </div>
               </div>
 

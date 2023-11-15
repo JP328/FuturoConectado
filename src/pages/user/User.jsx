@@ -10,20 +10,13 @@ export default function User() {
 
   const buttonsStyles = "w-4/5 border border-black p-2 text-center my-2 duration-300 hover:bg-originBlue hover:text-white cursor-pointer"
 
-  const { id, name, email, password } = useSelector((state) => {
-    return {
-      id : state.userData.data.id,
-      name : state.userData.data.name,
-      email : state.userData.data.email,
-      password : state.userData.data.password,
-    }
-  })
+  const data = useSelector((state) => state.userData.data)
 
   useEffect(() => {
-    id === '' && navigate("/")
-  }, [id])
+    data.id === '' && navigate("/")
+  }, [data.id])
 
-  console.log(id, name, email, password);
+  console.log(data.id);
 
   return (
     <>
@@ -35,7 +28,7 @@ export default function User() {
         <div className="w-4/5 flex justify-between text-xl mt-24">
           <ul className="w-1/2 flex flex-col justify-between transition-all">
             <li className={buttonsStyles}>
-              <Link to={`/editarUsuario/${id}`} >Atualizar Informações</Link>
+              <Link to={`/editarUsuario/${data.id}`} >Atualizar Informações</Link>
             </li>
             <li className={buttonsStyles}>Cadastrar Video</li>
             <li className={buttonsStyles}>Visualizar meus videos</li>

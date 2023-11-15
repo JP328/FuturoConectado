@@ -85,6 +85,7 @@ export default function Home() {
         <div ref={recentUploads} className="w-full h-full bg-originBlue py-14 flex items-center flex-col">
           <VideoSection/>
           <Link 
+            to='/videos'
             className="mt-8 text-xl font-bold text-originLight border border-originLight py-3 px-6 rounded-lg shadow hover:shadow-originLight">
             Ver Todos
           </Link>
