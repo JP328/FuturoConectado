@@ -49,7 +49,8 @@ export default function Register() {
           });
         }
       }).catch((err) => console.log(err))
-      navigate('/usuario')
+      
+      data.isAdmin ? navigate('/administrador') : navigate('/usuario')
 
     } else {
       await addUser(formData).then(res => {
@@ -223,7 +224,7 @@ export default function Register() {
                     </button>
                   </div>
 
-                  {id &&
+                  {!id &&
                     <div className="text-center">
                       <Link 
                         className="inline-block text-sm text-originLight font-semibold hover:font-bold transition-all duration-300" 

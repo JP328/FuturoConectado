@@ -10,7 +10,8 @@ const userDataSlice = createSlice({
       birthdate: '',
       email : '',
       cep : '',
-      password: ''
+      password: '',
+      isAdmin: false
     }
   },
   reducers: {

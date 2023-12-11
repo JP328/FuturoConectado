@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { BiLoader } from "react-icons/bi";
+import { AiOutlineReload } from "react-icons/ai";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
@@ -13,12 +13,12 @@ export default function VideoSection() {
   const [ videoLoading, setVideoLoading] = useState(true);
 
   const recentUploads = [
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK"
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK",
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK"
   ]
 
   const handleVideoLoading = ( ) => {
@@ -84,7 +84,7 @@ export default function VideoSection() {
                 className="relative py-8 pt-[25.25%] pr-[50.25%] max-sm:pt-[40.25%] max-sm:pr-[80.25%] mx-4 w-full flex items-center justify-center">
                 {
                   videoLoading ?
-                    <BiLoader size="4rem" className="absolute top-[36%] left-[42%] animate-spin text-originLight"/>
+                    <AiOutlineReload size="4rem" className="absolute top-[36%] left-[42%] animate-spin text-originLight"/>
                   : null
                 }
                 <ReactPlayer 

@@ -17,7 +17,7 @@ export default function LoginPage() {
     email : 'joao@gmail.com',
     cep : '00000-000',
     password: 'joao123',
-    isAdmin: true
+    isAdmin: false
   }
   
   const navigate = useNavigate()

@@ -19,10 +19,11 @@ export default function CadastrarVideo() {
 
   return (
     <>
-      <form className="flex flex-col justify-between items-center w-1/2 m-auto  h-full" onSubmit={handleSubmit} >
-        <div className="flex w-full gap-x-20">
+      <form className="flex flex-col justify-between items-center w-4/5 m-auto h-full gap-8" onSubmit={handleSubmit} >
+        <h2 className='text-4xl '>Cadastre seu video!</h2>
+        <div className="flex w-full gap-8">
 
-          <div className="flex w-1/2  flex-col">
+          <div className="flex w-1/2 flex-col">
             <label
               className="text-xl"
               htmlFor="titulo"

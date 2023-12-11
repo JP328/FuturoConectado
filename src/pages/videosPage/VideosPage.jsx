@@ -1,30 +1,30 @@
 import { useState } from "react";
 import Header from "../../components/header/Header";
-import { BiLoader } from "react-icons/bi";
+import { AiOutlineReload } from "react-icons/ai";
 import ReactPlayer from "react-player";
 
 export default function VideosPage() {
   const [ videoLoading, setVideoLoading] = useState(true);
 
   const recentUploads = [
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",    
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
-    "https://youtu.be/cRlYOHIwUGw?si=-VpY5vKLIFgwIhhh",
-    "https://youtu.be/mt1mXwBLsSE?si=vyOJETqfPutmD1zK",
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK",
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK",
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK",
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK",
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK",
+    "https://youtu.be/KO63mopvyxU?si=uB4vAozZYidNMFBU",
+    "https://youtu.be/Xns_sqr_j5E?si=CrWLzGAk6NcDwzJ3",
+    "https://youtu.be/PbLD3P1LUSE?si=tOxKhSG-ImKyosUK",
   ]
 
   const handleVideoLoading = ( ) => {
@@ -42,10 +42,10 @@ export default function VideosPage() {
           {recentUploads.map((video, index) => (
             <div 
               key={video + index} 
-              className="relative py-8 pt-[50.25%] pr-[50.25%] max-sm:pt-[40.25%] max-sm:pr-[80.25%] mx-4 w-full flex items-center justify-center">
+              className="relative py-10 my-3 pt-[50.25%] pr-[50.25%] max-sm:pt-[40.25%] max-sm:pr-[80.25%] mx-4 w-full flex items-center justify-center">
                 {
                   videoLoading ?
-                    <BiLoader size="4rem" className="absolute top-[36%] left-[42%] animate-spin text-originBlue"/>
+                    <AiOutlineReload size="4rem" className="absolute top-[36%] left-[42%] animate-spin text-originBlue"/>
                   : null
                 }
                 <ReactPlayer 
@@ -54,6 +54,13 @@ export default function VideosPage() {
                   height="100%" 
                   url={video}
                   onReady={handleVideoLoading} />
+                <div className="w-full -bottom-10 left-0 absolute flex justify-evenly items-center text-xl text-center">
+                  <button className="text-originLight bg-originBlue hover:bg-originBlue/90 px-5 py-1 rounded-md">
+                    Votar
+                  </button>
+                  <p className="">45 votos</p>
+
+                </div>
             </div>
           ))}
 

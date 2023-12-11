@@ -4,9 +4,11 @@ import { Dialog } from '@headlessui/react'
 import { Link } from 'react-router-dom'
 import { CgClose } from "react-icons/cg"
 import { BsPersonCircle } from "react-icons/bs"
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { addUser } from '../../store'
 
 export default function Header(props) {
+  const dispatch = useDispatch();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)  
   const [colorBarDefault, setColorBarDefault] = useState(props.recentUploads ? "bg-originLight/20" : "bg-originRed");
   
@@ -27,7 +29,18 @@ export default function Header(props) {
 
   window.addEventListener('scroll', handleColorBar);
 
-  const logout = () => {}
+  const logout = () => {
+    dispatch(addUser({
+      id: '',
+      fullName: '',
+      gender: 'Masculino',
+      birthdate: '',
+      email : '',
+      cep : '',
+      password: '',
+      isAdmin: false
+    }))
+  }
 
   return (
       <header className='w-full fixed top-0 z-40 backdrop-blur' >

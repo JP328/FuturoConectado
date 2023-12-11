@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <Header start={start} recentUploads={recentUploads} ourTeam={ourTeam} aboutUs={aboutUs}  contact={contact}/>
 
-      <div className="w-full h-screen relative select-none" ref={start}>
+      <div className="w-full h-screen relative" ref={start}>
         <video src="/production_id_4625285.mp4" className="-z-10 absolute w-full h-full object-cover" autoPlay loop muted/>
  
         <div className="w-full h-screen bg-gradient-to-t from-originBlue to-originRed/70">
@@ -100,7 +100,8 @@ export default function Home() {
           <h1 className="text-4xl lg:text-6xl text-center mt-16 mb-4">Sobre Nós</h1>
           <p className="mt-6 text-lg text-justify leading-7 font-medium">
             Bem-vindos(as) à nossa ONG, onde acreditamos no poder dos entusiastas engajados em causas sociais para transformar o mundo em um lugar melhor! Nossa missão é proporcionar um ambiente de apoio e recursos para essas pessoas servindo como impulsionador para suas ideias alcançarem os holofotes e, quem sabe, sair do papel!
-            <br />
+          </p>
+          <p className="mt-6 text-lg text-justify leading-7 font-medium">
             TROCAR - Somos uma gravadora inovadora, apaixonada por música e movida pela tecnologia. Nosso foco é descobrir e nutrir talentos emergentes, proporcionando um ambiente criativo e estimulante onde os jovens artistas podem explorar seu potencial artístico e abraçar a interseção entre a música e a tecnologia. Com nossos estúdios de última geração e uma comunidade de mentores experientes, oferecemos suporte personalizado e oportunidades de crescimento para que os artistas desenvolvam suas habilidades musicais e se destaquem na indústria. Estamos comprometidos em impulsionar a inovação, criando o futuro sonoro e deixando uma marca duradoura na indústria da música.
           </p>
         </div>
@@ -116,7 +117,7 @@ export default function Home() {
                 return (
                   <div 
                     key={index}  
-                    className="w-full md:w-[46%] lg:w-1/3 h-full my-5 flex max-md:flex-col items-center justify-center relative text-slate-200 select-none"
+                    className="w-full md:w-[46%] lg:w-1/3 h-full my-5 flex max-md:flex-col items-center justify-center relative text-slate-200"
                   >
                     <TeamCard name={member.name} img={member.img} description={member.description} />
                   </div>

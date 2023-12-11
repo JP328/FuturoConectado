@@ -8,7 +8,7 @@ export default function Admin() {
 
   const navigate = useNavigate();
 
-  const buttonsStyles = "w-4/5 border border-black p-2 text-center my-2 duration-300 hover:bg-originBlue hover:text-white cursor-pointer"
+  const buttonsStyles = "w-4/5 rounded-xl border border-black p-2 text-center my-2 duration-300 bg-originBlue text-white cursor-pointer hover:bg-originBlue/90"
 
   const data = useSelector((state) => state.userData.data)
 

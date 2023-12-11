@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-const dias = 2
+const dias = 1
 
 export default function Contador() {
 
